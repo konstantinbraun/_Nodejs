@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">	
+</head>
+<body>
+	<div class="container"> 
+		<h2><%= title %> <small>New app</small></h2>
+
+		<ul>
+			<% for (var i=0; i<items.length; i++) { %>
+				<li><%= items[i].desc %></li>
+			<%} %>
+		</ul>
+
+		<form method="post" action="/add" class="form-inline">
+			<div class="form-group">
+				<label for="newItem">Todo task</label>
+				<input type="text" class="form-control" name="newItem" id="newItem" placeholder="Enter new task">
+			</div>
+			<input type="submit" value="Submit" class="btn btn-default">
+		</form>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
+
+
+</body>
+</html>
